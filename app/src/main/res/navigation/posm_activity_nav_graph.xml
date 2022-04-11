@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/posm_activity_nav_graph"
+    app:startDestination="@id/posmActivityFragment">
+
+    <fragment
+        android:id="@+id/posmActivityFragment"
+        android:name="com.example.galleonpepsi.ui.posmactivity.PosmActivityFragment"
+        android:label="POSM Activity" >
+        <action
+            android:id="@+id/action_posmActivityFragment_to_pictureFragment"
+            app:destination="@id/pictureFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/pictureFragment"
+        android:name="com.example.galleonpepsi.ui.posmactivity.FragmentPicture"
+        android:label="Outlet Registration" />
+</navigation>

@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <dimen name="header_main_image_size">@dimen/_50sdp</dimen>
+
+    <dimen name="text_label_tittle_size">@dimen/_13ssp</dimen>
+    <dimen name="text_semi_label_tittle_size">@dimen/_11ssp</dimen>
+
+    <dimen name="dashboard_panel_main_card_width">@dimen/_125sdp</dimen>
+    <dimen name="dashboard_panel_main_card_height">@dimen/_155sdp</dimen>
+    <dimen name="progress_bar_dimen">@dimen/_75sdp</dimen>
+    <dimen name="top_banner_height">@dimen/_120sdp</dimen>
+    <dimen name="banner_image_width">@dimen/_40sdp</dimen>
+    <dimen name="banner_image_height">@dimen/_40sdp</dimen>
+
+    <dimen name="image_size">@dimen/_45sdp</dimen>
+
+    <dimen name="item_height">@dimen/_25sdp</dimen>
+    <dimen name="item_width">@dimen/_140sdp</dimen>
+    <dimen name="item_width_small">@dimen/_90sdp</dimen>
+
+    <dimen name="item_text_size">@dimen/_12ssp</dimen>
+</resources>

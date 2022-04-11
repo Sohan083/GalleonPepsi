@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/posm_activity_nav_graph"
+            android:icon="@drawable/ic_posm_activity"
+            android:title="@string/menu_posm_activity" />
+        <item
+            android:id="@+id/dashboard_nav_graph"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/menu_dashboard" />
+        <item
+            android:id="@+id/attendance_nav_graph"
+            android:icon="@drawable/ic_calendar"
+            android:title="@string/menu_attendance" />
+
+        <item
+            android:id="@+id/logout_nav_graph"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/menu_logout" />
+    </group>
+
+</menu>

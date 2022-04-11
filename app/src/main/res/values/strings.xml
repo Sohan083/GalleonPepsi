@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Galleon Pepsi</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_posm_activity">POSM Activity</string>
+    <string name="menu_logout">Log Out</string>
+    <string name="menu_attendance">Attendance</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="take_image_done">Image Captured</string>
+
+    <string name="version">1.2</string>
+    <string name="credit">©Interspeed Data Science Lab</string>
+
+
+</resources>

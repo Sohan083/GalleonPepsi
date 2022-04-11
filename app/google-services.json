@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "535223660875",
+    "firebase_url": "https://galleon-6b49c.firebaseio.com",
+    "project_id": "galleon-6b49c",
+    "storage_bucket": "galleon-6b49c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535223660875:android:387f9431b8b89beb88b8ce",
+        "android_client_info": {
+          "package_name": "com.example.galleongp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535223660875-d4la08q6aa57tg9c74q9nu3edbb0p1s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7L5On4vcYlgQBySBjTGcOJBWQY2aNdAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535223660875-d4la08q6aa57tg9c74q9nu3edbb0p1s3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535223660875:android:6c9ca1c760c125d588b8ce",
+        "android_client_info": {
+          "package_name": "com.example.galleonpepsi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535223660875-d4la08q6aa57tg9c74q9nu3edbb0p1s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7L5On4vcYlgQBySBjTGcOJBWQY2aNdAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535223660875-d4la08q6aa57tg9c74q9nu3edbb0p1s3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
