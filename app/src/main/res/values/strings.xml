@@ -8,8 +8,10 @@
     <string name="menu_dashboard">Dashboard</string>
     <string name="take_image_done">Image Captured</string>
 
-    <string name="version">1.2</string>
+    <string name="version">1.0</string>
     <string name="credit">©Interspeed Data Science Lab</string>
+    <string name="outlet_registration">Outlet Update</string>
+    <string name="menu_consumer_activity">Consumer Contact</string>
 
 
 </resources>

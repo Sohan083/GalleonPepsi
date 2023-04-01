@@ -2,9 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/posm_activity_nav_graph">
+    app:startDestination="@id/outlet_registration_nav_graph">
     <include
         app:graph="@navigation/logout_nav_graph"/>
+    <include
+        app:graph="@navigation/outlet_registration_nav_graph"/>
+    <include
+        app:graph="@navigation/consumer_contact_nav_graph"/>
     <include
         app:graph="@navigation/posm_activity_nav_graph"/>
     <include

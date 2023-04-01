@@ -19,6 +19,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
     <application
+        android:name=".core.MyApplication"
         android:allowBackup="true"
         tools:replace="android:icon"
         android:icon="@mipmap/ic_launcher"
@@ -33,7 +34,7 @@
             android:screenOrientation="portrait"
             >
         </activity>
-        <activity android:name="com.example.galleonpepsi.ui.login.LoginActivity"
+        <activity android:name="com.example.galleonpepsi.presentation.view.login.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:exported="true">
             <intent-filter>

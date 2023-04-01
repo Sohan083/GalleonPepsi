@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/outlet_registration_nav_graph"
+    app:startDestination="@id/outletRegistrationFragment">
+
+    <fragment
+        android:id="@+id/outletRegistrationFragment"
+        android:name="com.example.galleonpepsi.presentation.view.outletregistration.OutletRegistrationFragment"
+        android:label="Outlet Update" >
+        <action
+            android:id="@+id/action_outletRegistrationFragment_to_pictureregistrationFragment"
+            app:destination="@id/registrationPictureFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registrationPictureFragment"
+        android:name="com.example.galleonpepsi.presentation.view.outletregistration.FragmentRegistrationPicture"
+        android:label="Outlet Update" />
+</navigation>

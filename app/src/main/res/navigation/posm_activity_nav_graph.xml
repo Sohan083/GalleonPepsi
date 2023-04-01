@@ -18,6 +18,6 @@
     </fragment>
     <fragment
         android:id="@+id/pictureFragment"
-        android:name="com.example.galleonpepsi.ui.posmactivity.FragmentPicture"
+        android:name="com.example.galleonpepsi.presentation.view.posmactivity.FragmentPicture"
         android:label="Outlet Registration" />
 </navigation>

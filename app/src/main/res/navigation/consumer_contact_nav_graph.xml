@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/consumer_contact_nav_graph"
+    app:startDestination="@id/outletListFragment">
+
+    <fragment
+        android:id="@+id/outletListFragment"
+        android:name="com.example.galleonpepsi.presentation.view.consumercontact.OutletListFragment"
+        android:label="Outlet List" >
+        <action
+            android:id="@+id/action_outletListFragment_to_fragmentConsumerContact2"
+            app:destination="@id/fragmentConsumerContact2"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentConsumerContact2"
+        android:name="com.example.galleonpepsi.presentation.view.consumercontact.FragmentConsumerContact"
+        android:label="Consumer Contact" />
+</navigation>

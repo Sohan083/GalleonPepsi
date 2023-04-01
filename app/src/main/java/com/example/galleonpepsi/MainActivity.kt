@@ -7,28 +7,29 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.Menu
-import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import cn.pedant.SweetAlert.SweetAlertDialog
-import com.example.galleonpepsi.model.User
-import com.example.galleonpepsi.model.User.Companion.user
-import com.example.galleonpepsi.ui.login.LoginActivity
+import com.example.galleonpepsi.data.User
+import com.example.galleonpepsi.data.User.Companion.user
+import com.example.galleonpepsi.presentation.view.login.LoginActivity
 
-import com.example.galleonpepsi.utils.CustomUtility
-import com.example.galleonpepsi.utils.GPSLocation
-import com.example.galleonpepsi.utils.StaticTags.Companion.GPS_REQUEST
-import com.example.galleonpepsi.utils.StaticTags.Companion.LOCATION_REQUEST
+import com.example.galleonpepsi.core.utils.CustomUtility
+import com.example.galleonpepsi.core.utils.GPSLocation
+import com.example.galleonpepsi.core.utils.StaticTags.Companion.GPS_REQUEST
+import com.example.galleonpepsi.core.utils.StaticTags.Companion.LOCATION_REQUEST
+import com.example.galleonpepsi.presentation.view.login.viewmodel.LoginViewModel
 
 import com.google.android.material.navigation.NavigationView
 import java.util.*
@@ -36,8 +37,8 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private var isGPSEnabled: Boolean = false
-    private lateinit var appBarConfiguration: AppBarConfiguration
-
+    //private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var viewModel: LoginViewModel
     private var gpsLocation: GPSLocation? = null
     private lateinit var navController: NavController
     var doubleBackToExitPressedOnce = false
@@ -57,8 +58,10 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val appBarConfiguration = AppBarConfiguration(topLevelDestinationIds = setOf(
-            R.id.posmActivityFragment,
-            R.id.dashboardFragment,
+            R.id.outletRegistrationFragment,
+           // R.id.outletListFragment,
+//            R.id.dashboardFragment,
+         //   R.id.posmActivityFragment,
             R.id.attendanceFragment,
             R.id.logoutFragment,
         ),drawerLayout)
@@ -70,6 +73,29 @@ class MainActivity : AppCompatActivity() {
 
         menuNav = navigationView.menu
 
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+
+        viewModel.isLoggedIn.observe(this) { isLoggedIn ->
+            if (isLoggedIn) {
+                viewModel.updateSessionData()
+
+            } else {
+                val s = SweetAlertDialog(applicationContext,SweetAlertDialog.WARNING_TYPE)
+                s.titleText = "Session Out"
+                s.setConfirmButton("Login", SweetAlertDialog.OnSweetClickListener {
+                    finish()
+                    startActivity(Intent(applicationContext, LoginActivity::class.java))
+                })
+                s.setCancelable(false)
+                s.show()
+            }
+        }
+        val navHeaderMainView = navigationView.getHeaderView(0)
+        viewModel.userData.observe(this) {
+            navHeaderMainView.findViewById<TextView>(R.id.name).text = it.full_name
+            if(it.zone_name != "null")
+            navHeaderMainView.findViewById<TextView>(R.id.location).text = it.zone_name
+        }
 
         user = User.instance
         if (user == null) {
@@ -80,9 +106,7 @@ class MainActivity : AppCompatActivity() {
                 finish()
             }
         }
-        val navHeaderMainView = navigationView.getHeaderView(0)
-        navHeaderMainView.findViewById<TextView>(R.id.name).text = user?.name
-        navHeaderMainView.findViewById<TextView>(R.id.location).text = user?.zone
+
 
 
 

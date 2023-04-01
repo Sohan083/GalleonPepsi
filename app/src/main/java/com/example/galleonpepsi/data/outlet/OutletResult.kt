@@ -1,0 +1,30 @@
+package com.example.galleonpepsi.data.outlet
+
+data class OutletResult(
+    val accuracy: String?,
+    val address: String?,
+    val bp_name: String?,
+    val contact_person_mobile: String?,
+    val contact_person_name: String?,
+    val created_by: String?,
+    val distributor_id: String?,
+    val distributor_name: String?,
+    val has_shop_fascia: String?,
+    val id: String?,
+    val lat_value: String?,
+    val lon_value: String?,
+    val name: String?,
+    val posm1_brand_id: String?,
+    val posm1_brand_name: String?,
+    val posm1_drink_id: String?,
+    val posm1_drink_name: String?,
+    val posm1_has_light_box: String?,
+    val posm2_brand_id: String?,
+    val posm2_brand_name: String?,
+    val posm2_drink_id: String?,
+    val posm2_drink_name: String?,
+    val posm2_has_light_box: String?,
+    val remarks: String?,
+    val retail_code: String?,
+    val retail_type: String?
+)

@@ -5,6 +5,14 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/outlet_registration_nav_graph"
+            android:icon="@drawable/ic_retail"
+            android:title="@string/outlet_registration" />
+     <!--   <item
+            android:id="@+id/consumer_contact_nav_graph"
+            android:icon="@drawable/ic_consumer_contact"
+            android:title="@string/menu_consumer_activity" />-->
+     <!--   <item
             android:id="@+id/posm_activity_nav_graph"
             android:icon="@drawable/ic_posm_activity"
             android:title="@string/menu_posm_activity" />
@@ -15,7 +23,7 @@
         <item
             android:id="@+id/attendance_nav_graph"
             android:icon="@drawable/ic_calendar"
-            android:title="@string/menu_attendance" />
+            android:title="@string/menu_attendance" />-->
 
         <item
             android:id="@+id/logout_nav_graph"
